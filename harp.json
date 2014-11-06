@@ -1,0 +1,14 @@
+{
+  "globals": {
+    "title": "Shane Keulen - Web Developer",
+    "name": "Shane Keulen",
+    "phone": "647-772-0851",
+    "email": "shane.keulen@gmail.com",
+    "twitter": "SeeThruhead",
+    "github": "SeeThruHead",
+    "uri": "http://shanekeulen.com"
+  },
+  "about": {
+    "title": "hello"
+  }
+}
