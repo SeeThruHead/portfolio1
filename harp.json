@@ -2,10 +2,16 @@
   "globals": {
     "title": "Shane Keulen - Web Developer",
     "name": "Shane Keulen",
+    "firstName": "Shane",
+    "handle": "SeeThruHead",
+    "photo": "/images/headshot.jpg",
+    "heroImage": "/images/toronto.jpg",
+    "job": "Front-end Developer",
+    "blurb": "I develop Web Interactions, in Toronto Ontario",
     "phone": "647-772-0851",
-    "email": "shane.keulen@gmail.com",
-    "twitter": "SeeThruhead",
-    "github": "SeeThruHead",
+    "email": "mailto:shane.keulen@gmail.com",
+    "github": "http://github.com/seethruhead",
+    "twitter": "http://twitter.com/seethruhead",
     "uri": "http://shanekeulen.com"
   },
   "about": {

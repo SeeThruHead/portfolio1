@@ -1,0 +1,7 @@
+!= partial('../_partials/nav')
+
+!= partial('../_partials/header')
+.page
+  != yield
+  img(src=image, alt="")
+!= partial('../_partials/footer')

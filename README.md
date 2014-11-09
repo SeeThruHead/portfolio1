@@ -1,6 +1,6 @@
 # A portfolio page for Shane Keulen
 Using harp to:
 -compile jade
--compile stylus
+-compile markdown
 
-Using Gulp for livereload, and to bundle JS
+Using Gulp with browsersync, browserify, stylus.

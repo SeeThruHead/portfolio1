@@ -1,2 +1,9 @@
-h1 how are you today
-h2 i'm fine
+#hero
+  .hero-content
+    h1 I'm
+      span.hero-name= ' ' + firstName
+    h3.job= job
+    p.blurb= blurb
+    button check github
+!=partial('_partials/nav')
+!=partial('about.jade')

@@ -1,0 +1,4 @@
+for post, slug in public.portfolio._data
+  h2: a(href="/portfolio/#{slug}")= post.title
+  != partial('/portfolio/' + slug)
+  img(src=post.image, alt="")

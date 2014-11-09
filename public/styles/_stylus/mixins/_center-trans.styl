@@ -1,0 +1,26 @@
+center-trans($axis = false)
+  position: absolute
+  if $axis != x
+    top: 50%
+    margin-top: auto
+    margin-bottom: auto
+  if $axis != y
+    left: 50%
+    margin-left: auto
+    margin-right: auto
+  $translate-val = null
+  if not $axis
+    $translate-val = translate(-50%, -50%)
+  else if $axis != x
+    $translate-val = translateY(-50%)
+  else if $axis != y
+    $translate-val = translateX(-50%)
+  -webkit-transform: $translate-val
+  -ms-transform: $translate-val
+  transform: $translate-val
+$center-trans
+  scut-center-trans()
+$center-transform-x
+  scut-center-trans(x)
+$center-transform-y
+  scut-center-trans(y)

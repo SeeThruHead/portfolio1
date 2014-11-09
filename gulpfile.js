@@ -17,7 +17,7 @@ gulp.task('styles', function () {
     .pipe(stylus({
       use: nib(),
       import: 'nib',
-      compress: true
+      compress: false
     }))
     .pipe(gulp.dest('./public/styles'));
 });
@@ -35,6 +35,7 @@ gulp.task('browserify', function() {
 
 gulp.task('watchjs', function() {
   var bundler = watchify(browserify('./public/scripts/_src/main.js'));
+  bundler.transform('debowerify');
   bundler.on('update', rebundle);
 
   function rebundle() {
