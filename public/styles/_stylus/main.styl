@@ -1,23 +1,16 @@
+global-reset()
 // import globals from from harp.json
 harp = json('../../../harp.json', {hash: true})
 // import stylus partials
+$fa-font-path = '../../fonts/font-awesome-stylus/fonts'
+@require '../../_components/font-awesome-stylus/stylus/index.styl'
+
 @require 'mixins/*'
-@require 'reset'
 @require 'colors'
 @require 'type'
+@require 'globals'
 @require 'hero'
 @require 'nav'
-
-body
-  height 4000px
-.social-links
-  list-inline(1em)
-.photo
-  border-radius 50%
-  max-width 100%
-  //get the photo URL from harp.json
-  photo = harp.globals.photo
-  background-image url(photo)
-  background-size cover
-  background-position top -30px center
-  size(400)
+@require 'footer'
+@require 'about'
+@require 'skills'

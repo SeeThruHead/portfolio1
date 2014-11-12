@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "jquery": "^2.1.1",
+    "jquery-smooth-scroll": "^1.5.3",
     "sticky-header": "git://github.com/seethruhead/sticky-header"
   }
 }

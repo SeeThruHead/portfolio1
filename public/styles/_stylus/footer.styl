@@ -1,0 +1,39 @@
+.footer-push
+  min-height 100%
+  margin-bottom -262px
+  &:after
+    content ''
+    display block
+    height 262px
+footer
+  text-align center
+  padding 50px 0
+  background-color color-bgdark
+  color lighten(color-bgdark, 10%)
+.social-links
+  list-inline(4em)
+  .circ
+    position relative
+    margin-bottom 40px
+    size 100px
+    display inline-block
+    background-color lighten(color-bgdark, 10%)
+    border-radius 50%
+  a
+    vertical-align middle
+    font-size 50px
+    text-decoration none
+    color color-bgdark
+  li:first-child i
+    fa('twitter')
+    line-height 100px
+    vertical-align middle
+  li:nth-child(2) i
+    fa('github')
+    line-height 100px
+    vertical-align middle
+  li:last-child i
+    fa('envelope')
+    position absolute
+    top 24%
+    left 26%

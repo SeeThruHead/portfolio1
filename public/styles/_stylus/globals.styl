@@ -1,0 +1,51 @@
+@require 'mixins/_border-box'
+border-box()
+
+sectionstyle(shade = 'dark')
+  padding 116px 0 121px 0
+  h2:after
+    content ''
+    width 360px
+    height 11px
+    background-color color-accent
+    display block
+    margin-top 33px
+    margin-bottom 42px
+  if shade != 'dark'
+    background-color color-bglight
+    color color-textlight
+    h2, h5
+      color color-headinglight
+    h4
+      color color-subheadinglight
+  else
+    background-color color-bgdark
+    color color-textdark
+    h2
+      color color-headingdark
+html, body
+  height 100%
+a
+  text-decoration none
+  color color-accent
+  &:visited
+    color darken(color-accent, 30%)
+button
+  text-transform uppercase
+  .about &
+    text-transform none
+  padding 10px 20px
+  cursor pointer
+  font-family opens
+  font-size 15px
+  font-weight 700
+  line-height 30px
+  background-color color-bgdark
+  color color-navtext
+  border 1px solid white
+
+.container
+  width 80%
+  max-width 960px
+  margin 0 auto
+

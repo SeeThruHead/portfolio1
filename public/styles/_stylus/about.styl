@@ -1,0 +1,26 @@
+harp = json('../../../harp.json', {hash: true})
+#about
+  position relative
+  display block
+  top -136px
+  visibility hidden
+section.about
+  .index &
+    padding-top 35px
+  sectionstyle('light')
+  h4, h5
+    color color-headinglight
+  aside
+    width 60%
+  .photo
+    margin-top 30px
+    margin-left 10%
+    float right
+    border-radius 50%
+    max-width 100%
+    //get the photo URL from harp.json
+    photo = harp.globals.photo
+    background-image url(photo)
+    background-size cover
+    background-position top -30px center
+    size(250px)

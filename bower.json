@@ -1,0 +1,20 @@
+{
+  "name": "portfolio1",
+  "version": "0.0.0",
+  "homepage": "https://github.com/SeeThruHead/portfolio1",
+  "authors": [
+    "Shane Keulen <shane.keulen@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery-sticktotop": "~0.6.1",
+    "font-awesome-stylus": "~1.2.1"
+  }
+}

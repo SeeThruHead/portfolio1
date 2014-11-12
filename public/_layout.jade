@@ -1,7 +1,7 @@
+!= partial('_partials/header')
 if (current.source !== 'index')
   != partial('_partials/nav')
-
-!= partial('_partials/header')
-.page
-  != yield
+.footer-push
+  .page
+    != yield
 != partial('_partials/footer')

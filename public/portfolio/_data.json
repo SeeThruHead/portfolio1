@@ -1,18 +1,18 @@
 {
   "port1": {
-    "title": "Portfolio Piece One",
+    "title": "jQuery Gallery",
     "image": "http://placesheen.com/400/300"
   },
   "port2": {
-    "title": "Portfolio Piece Two",
+    "title": "Mobile First",
     "image": "http://www.placecage.com/c/400/300"
   },
   "port3": {
-    "title": "Portfolio Piece Three",
+    "title": "Responsive Design",
     "image": "http://www.fillmurray.com/400/300"
   },
   "port4": {
-    "title": "Portfolio Piece Four",
+    "title": "jQuery Plugin",
     "image": "http://nicenicejpg.com/400/300"
   }
 }
