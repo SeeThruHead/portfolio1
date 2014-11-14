@@ -165,6 +165,17 @@ html {
   -moz-box-sizing: inherit;
   box-sizing: inherit;
 }
+.page {
+  zoom: 1;
+}
+.page:before,
+.page:after {
+  content: "";
+  display: table;
+}
+.page:after {
+  clear: both;
+}
 html,
 body {
   height: 100%;
@@ -503,4 +514,59 @@ p.main {
   color: #434957;
   line-height: 141px;
   vertical-align: middle;
+}
+.portfolio {
+  padding: 116px 0 121px 0;
+  background-color: #323641;
+  color: #8c9099;
+  zoom: 1;
+  padding-bottom: 60px;
+}
+.portfolio h2:after {
+  content: '';
+  width: 360px;
+  height: 11px;
+  background-color: #fc5653;
+  display: block;
+  margin-top: 33px;
+  margin-bottom: 42px;
+}
+.portfolio h2 {
+  color: #fff;
+}
+.portfolio:before,
+.portfolio:after {
+  content: "";
+  display: table;
+}
+.portfolio:after {
+  clear: both;
+}
+.portfolio-area {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.portfolio-area img {
+  max-width: 100%;
+}
+.port-item {
+  overflow: hidden;
+  position: relative;
+  padding: 60px;
+  width: 50%;
+  float: left;
+}
+.port-item h5 {
+  position: relative;
+  z-index: 999;
+}
+.port-item:hover:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: rgba(0,0,0,0.3);
 }

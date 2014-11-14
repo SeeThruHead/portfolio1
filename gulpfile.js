@@ -9,7 +9,27 @@ var source      = require('vinyl-source-stream');
 var nib         = require('nib');
 var watchify    = require('watchify');
 var browserify  = require('browserify');
+var imagemin    = require('gulp-imagemin');
+var pngcrush    = require('imagemin-pngcrush');
+var imageResize = require('gulp-image-resize');
 
+// Compress Images Once
+gulp.task('imagemin', function () {
+    return gulp.src('./public/images/*')
+        .pipe(imagemin({
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}],
+            use: [pngcrush()]
+        }))
+        .pipe(gulp.dest('./public/images/'));
+});
+gulp.task('resize', function () {
+  gulp.src('./public/images/*')
+    .pipe(imageResize({
+      width : 600
+    }))
+    .pipe(gulp.dest('./public/images/thumbs'));
+});
 // Define Stylus Compilation task
 gulp.task('styles', function () {
   return gulp.src('./public/styles/_stylus/main.styl')

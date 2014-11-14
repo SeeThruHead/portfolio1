@@ -1,4 +1,11 @@
-for post, slug in public.portfolio._data
-  h2: a(href="/portfolio/#{slug}")= post.title
-  != partial('/portfolio/' + slug)
-  img(src=post.image, alt="")
+section.portfolio
+  .container
+    h2 Recent <br> Works
+
+.portfolio-area
+  for post, slug in public.portfolio._data
+    a(href=post.link).port-item
+      //- h5: a(href="/portfolio/#{slug}")= post.title
+      h5= post.title
+      //- != partial('/portfolio/' + slug)
+      img(src=post.image, alt="")

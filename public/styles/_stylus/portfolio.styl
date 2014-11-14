@@ -1,0 +1,27 @@
+.portfolio
+  sectionstyle('dark')
+  clearfix()
+  padding-bottom 60px
+.portfolio-area
+  img
+    max-width 100%
+  padding-top 100px
+  padding-bottom 100px
+.port-item
+  h5
+    position relative
+    z-index 999
+  // height 400px
+  overflow hidden
+  position relative
+  &:hover:before
+    content ''
+    size(100%)
+    position absolute
+    top 0
+    left 0
+    height 100%
+    background-color rgba(0,0,0,.3)
+  padding 60px
+  width 50%
+  float left

@@ -1,18 +1,22 @@
 {
   "port1": {
     "title": "jQuery Gallery",
-    "image": "http://placesheen.com/400/300"
+    "image": "/images/gallery.jpg",
+    "link": "http://seethruhead.com/gallery/"
   },
   "port2": {
     "title": "Mobile First",
-    "image": "http://www.placecage.com/c/400/300"
+    "image": "/images/copenh.jpg",
+    "link": "http://seethruhead.com/proj2"
   },
   "port3": {
     "title": "Responsive Design",
-    "image": "http://www.fillmurray.com/400/300"
+    "image": "/images/solido.jpg",
+    "link": "http://seethruhead.com/solido"
   },
   "port4": {
     "title": "jQuery Plugin",
-    "image": "http://nicenicejpg.com/400/300"
+    "image": "/images/filter.jpg",
+    "link": "http://blog.shanekeulen.com/filterPlugin"
   }
 }
