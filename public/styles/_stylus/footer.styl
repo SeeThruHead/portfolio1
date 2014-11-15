@@ -12,7 +12,14 @@ footer
   color lighten(color-bgdark, 10%)
 .social-links
   list-inline(4em)
+  @media screen and (max-width: 480px)
+    list-inline(2em)
+  @media screen and (max-width: 380px)
+    list-inline(.5em)
   .circ
+    &:hover
+      background-color lighten(color-bgdark, 20%)
+    transition all .3s ease
     position relative
     margin-bottom 40px
     size 100px

@@ -12,10 +12,16 @@ section.about
     color color-headinglight
   aside
     width 60%
+    @media screen and (max-width: 1000px)
+      width 100%
   .photo
     margin-top 30px
     margin-left 10%
     float right
+    @media screen and (max-width: 700px)
+      float none
+      margin 0 auto
+      margin-bottom 30px
     border-radius 50%
     max-width 100%
     //get the photo URL from harp.json

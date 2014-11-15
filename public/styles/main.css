@@ -128,6 +128,12 @@ h2 {
   font-size: 72px;
   line-height: 60px;
 }
+@media screen and (max-width: 360px) {
+  h2 {
+    font-size: 60px;
+    line-height: 48px;
+  }
+}
 h3 {
   font-size: 48px;
 }
@@ -198,6 +204,14 @@ button {
   background-color: #323641;
   color: #fff;
   border: 1px solid #fff;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+button:hover {
+  background-color: #545b6e;
 }
 .about button {
   text-transform: none;
@@ -333,7 +347,40 @@ footer {
 .social-links > li + li {
   margin-left: 4em;
 }
+@media screen and (max-width: 480px) {
+  .social-links {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .social-links > li {
+    display: inline-block;
+  }
+  .social-links > li + li {
+    margin-left: 2em;
+  }
+}
+@media screen and (max-width: 380px) {
+  .social-links {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .social-links > li {
+    display: inline-block;
+  }
+  .social-links > li + li {
+    margin-left: 0.5em;
+  }
+}
 .social-links .circ {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   position: relative;
   margin-bottom: 40px;
   width: 100px;
@@ -342,6 +389,9 @@ footer {
   background-color: #434957;
   -webkit-border-radius: 50%;
   border-radius: 50%;
+}
+.social-links .circ:hover {
+  background-color: #545b6e;
 }
 .social-links a {
   vertical-align: middle;
@@ -415,6 +465,11 @@ section.about h2:after {
   margin-top: 33px;
   margin-bottom: 42px;
 }
+@media screen and (max-width: 360px) {
+  section.about h2:after {
+    width: 200px;
+  }
+}
 section.about h2,
 section.about h5 {
   color: #313338;
@@ -428,6 +483,11 @@ section.about h5 {
 }
 section.about aside {
   width: 60%;
+}
+@media screen and (max-width: 1000px) {
+  section.about aside {
+    width: 100%;
+  }
 }
 section.about .photo {
   margin-top: 30px;
@@ -444,6 +504,13 @@ section.about .photo {
   width: 250px;
   height: 250px;
 }
+@media screen and (max-width: 700px) {
+  section.about .photo {
+    float: none;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+}
 section.skills {
   padding: 116px 0 121px 0;
   background-color: #fff;
@@ -458,6 +525,11 @@ section.skills h2:after {
   display: block;
   margin-top: 33px;
   margin-bottom: 42px;
+}
+@media screen and (max-width: 360px) {
+  section.skills h2:after {
+    width: 200px;
+  }
 }
 section.skills h2,
 section.skills h5 {
@@ -530,6 +602,11 @@ p.main {
   display: block;
   margin-top: 33px;
   margin-bottom: 42px;
+}
+@media screen and (max-width: 360px) {
+  .portfolio h2:after {
+    width: 200px;
+  }
 }
 .portfolio h2 {
   color: #fff;

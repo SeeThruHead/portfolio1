@@ -7,6 +7,8 @@ sectionstyle(shade = 'dark')
   h2:after
     content ''
     width 360px
+    @media screen and (max-width: 360px)
+      width 200px
     height 11px
     background-color color-accent
     display block
@@ -32,6 +34,8 @@ a
   &:visited
     color darken(color-accent, 30%)
 button
+  &:hover
+    background-color lighten(color-bgdark, 20%)
   text-transform uppercase
   .about &
     text-transform none
@@ -44,6 +48,7 @@ button
   background-color color-bgdark
   color color-navtext
   border 1px solid white
+  transition all .3s ease
 
 .container
   width 80%

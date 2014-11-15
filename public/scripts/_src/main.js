@@ -21,7 +21,6 @@ var tallest = 0;
 $(window).resize(function() {
   tallest = findTallest();
   $slides.eq(0).height(tallest);
-  console.log($slides.eq(0).height());
 }).resize();
 $('.skillgrid').on('mouseleave', function() {
   $slides.stop();
