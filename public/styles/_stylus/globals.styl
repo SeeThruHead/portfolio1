@@ -34,7 +34,9 @@ a
   &:visited
     color darken(color-accent, 30%)
 button
-  &:hover
+  &:focus
+    outline 0
+  &:hover, &.selected
     background-color lighten(color-bgdark, 20%)
   text-transform uppercase
   .about &
@@ -49,7 +51,6 @@ button
   color color-navtext
   border 1px solid white
   transition all .3s ease
-
 .container
   width 80%
   max-width 960px

@@ -1,40 +1,23 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 require('../../_components/jquery-sticktotop/src/jquery-sticktotop.min.js');
 require('jquery-smooth-scroll');
+var $skilBut = $('.skill-sel button'),
+  $pageView = $('.page-view');
 // Setup Sticky Nav
 $('.site-nav').stickToTop();
 $('a').smoothScroll();
 
-$slides = $('.slide');
-function findTallest() {
-  var tallestHeight = 0;
-  $slides.each(function () {
-    var theHeight = $(this).height();
-
-    if (tallestHeight <  theHeight) {
-      tallestHeight = theHeight;
-    }
-  });
-  return tallestHeight;
-};
-// tallest = 900
-var tallest = 0;
-$(window).resize(function() {
-  tallest = findTallest();
-  $slides.eq(0).height(tallest);
-}).resize();
-$('.skillgrid').on('mouseleave', function() {
-  $slides.stop();
-  $slides.not(':eq(0)').animate({height: 0, opacity: 0});
-  $slides.eq(0).animate({height: tallest, opacity: 1});
+$skilBut.click(function () {
+  var shift = ($skilBut.index(this) + 1) * 20,
+    $clicked = $(this),
+    isClicked = $clicked.hasClass('selected'),
+    i = $skilBut.length;
+  $pageView.css('transform', 'translateX(-'+(isClicked ? 0 : shift) +'%)' );
+  while (i--) {
+    $skilBut.eq(i).removeClass('selected');
+  }
+  isClicked || $clicked.addClass('selected');
 });
-$triggers = $('.category').mouseover(function() {
-  var index = $triggers.index($(this)) + 1;
-  $slides.stop();
-  $slides.not(':eq(' + index + ')').animate({height: 0, opacity: 0});
-  $slides.eq(index).animate({height: tallest, opacity: 1});
-});
-
 },{"../../_components/jquery-sticktotop/src/jquery-sticktotop.min.js":3,"jquery-smooth-scroll":2}],2:[function(require,module,exports){
 /*!
  * jQuery Smooth Scroll - v1.5.3 - 2014-10-15

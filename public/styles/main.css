@@ -210,7 +210,11 @@ button {
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-button:hover {
+button:focus {
+  outline: 0;
+}
+button:hover,
+button.selected {
   background-color: #545b6e;
 }
 .about button {
@@ -515,7 +519,19 @@ section.skills {
   padding: 116px 0 121px 0;
   background-color: #fff;
   color: #8c9099;
-  padding-bottom: 121px;
+  padding-top: 80px;
+  padding-bottom: 111px;
+}
+section.skills .view-port {
+  overflow: hidden;
+}
+section.skills .page-view {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  width: 500%;
 }
 section.skills h2:after {
   content: '';
@@ -538,54 +554,28 @@ section.skills h5 {
 section.skills h4 {
   color: #4f525a;
 }
-p.main {
+section.skills p.main {
   margin-bottom: 30px;
   line-height: 1.6;
 }
-.slide {
-  overflow: hidden;
-}
-.skillgrid {
-  cursor: pointer;
-  background-color: #fc5653;
-  height: 150px;
-}
-.hidden {
-  height: 0;
-  opacity: 0;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  filter: alpha(opacity=0);
-}
-.category {
-  -webkit-transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  -ms-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  border-right: 1px solid #b03c3a;
+.skill-sel {
   text-align: center;
-  width: 25%;
-  float: left;
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 116px;
 }
-.category:hover {
-  background-color: #b03c3a;
+.skill-sel > li {
+  display: inline-block;
 }
-.category:hover h4 {
-  color: #eaeaec;
+.skill-sel > li + li {
+  margin-left: 2em;
 }
-.category:last-child {
-  border-right: none;
-}
-.category h4 {
-  -webkit-transition: color 0.2s ease;
-  -moz-transition: color 0.2s ease;
-  -o-transition: color 0.2s ease;
-  -ms-transition: color 0.2s ease;
-  transition: color 0.2s ease;
-  font-size: 40px;
-  color: #434957;
-  line-height: 141px;
-  vertical-align: middle;
+.slide {
+  width: 20%;
+  display: inline-block;
+  vertical-align: top;
 }
 .portfolio {
   padding: 116px 0 121px 0;

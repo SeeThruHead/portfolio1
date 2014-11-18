@@ -1,35 +1,19 @@
 require('../../_components/jquery-sticktotop/src/jquery-sticktotop.min.js');
 require('jquery-smooth-scroll');
+var $skilBut = $('.skill-sel button'),
+  $pageView = $('.page-view');
 // Setup Sticky Nav
 $('.site-nav').stickToTop();
 $('a').smoothScroll();
 
-$slides = $('.slide');
-function findTallest() {
-  var tallestHeight = 0;
-  $slides.each(function () {
-    var theHeight = $(this).height();
-
-    if (tallestHeight <  theHeight) {
-      tallestHeight = theHeight;
-    }
-  });
-  return tallestHeight;
-};
-// tallest = 900
-var tallest = 0;
-$(window).resize(function() {
-  tallest = findTallest();
-  $slides.eq(0).height(tallest);
-}).resize();
-$('.skillgrid').on('mouseleave', function() {
-  $slides.stop();
-  $slides.not(':eq(0)').animate({height: 0, opacity: 0});
-  $slides.eq(0).animate({height: tallest, opacity: 1});
-});
-$triggers = $('.category').mouseover(function() {
-  var index = $triggers.index($(this)) + 1;
-  $slides.stop();
-  $slides.not(':eq(' + index + ')').animate({height: 0, opacity: 0});
-  $slides.eq(index).animate({height: tallest, opacity: 1});
+$skilBut.click(function () {
+  var shift = ($skilBut.index(this) + 1) * 20,
+    $clicked = $(this),
+    isClicked = $clicked.hasClass('selected'),
+    i = $skilBut.length;
+  $pageView.css('transform', 'translateX(-'+(isClicked ? 0 : shift) +'%)' );
+  while (i--) {
+    $skilBut.eq(i).removeClass('selected');
+  }
+  isClicked || $clicked.addClass('selected');
 });
